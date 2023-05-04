@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 
+import { FormsModule } from '@angular/forms';
+
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { LoginComponent } from './login/login.component';
@@ -22,6 +24,8 @@ import { OffreComponent } from './offre/offre.component';
 import { EventComponent } from './event/event.component';
 import { CowComponent } from './cow/cow.component';
 import { ActualiteComponent } from './actualite/actualite.component';
+import { RComponent } from './r/r.component';
+import { ClComponent } from './cl/cl.component';
 
 
 
@@ -44,13 +48,16 @@ import { ActualiteComponent } from './actualite/actualite.component';
     OffreComponent,
     EventComponent,
     CowComponent,
-    ActualiteComponent
+    ActualiteComponent,
+    RComponent,
+    ClComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule
     
   ],
   providers: [],
