@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 
-
-
-
-export class AppModule { }
-
 @Component({
   selector: 'app-c',
   templateUrl: './c.component.html',
   styleUrls: ['./c.component.css']
 })
 export class CComponent {
+  showNotifications: boolean = false;
+  
+  toggleNotifications() {
+    this.showNotifications = !this.showNotifications;
+   }
+   // ...
   exp: any = [];
   formation: any = [];
   langue: any = [];
@@ -64,21 +65,9 @@ export class CComponent {
       }
     )
   }
-
-
-
-
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
     console.log(file);
     // Vous pouvez envoyer la vidéo au serveur à partir d'ici
   }
-
-
-  isToggled = false;
-
-  toggleButton() {
-    this.isToggled = !this.isToggled;
-  }
-
 }

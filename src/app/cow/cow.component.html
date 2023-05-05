@@ -20,31 +20,101 @@
 
   <div class="container-fluid">
     <div class="row align-items-center">
-        <div class="site-logo col-6 mt-4"><a href="index.html" ><img src="assets/images/sarra.png" style="width: 160;"alt="" title=""></a></div>
+        <div class="site-logo col-6 "><a href="index.html" ><img src="assets/images/sarra.png" style="width: 100;"alt="" title=""></a></div>
 
       <nav class="mx-auto site-navigation d-flex aligin-items-center col-5">
         <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
           <li><a href="/actualite">Actualité</a></li>
-          <li><a href="c">Profile</a></li>
-          <li><a href="offre">Offre</a></li>
+          <li><a href="offre">offre</a></li>
           <li><a href="event">Event</a></li>
           <li><a href="cow">Coworking</a></li>
-          <li class="d-lg-none"><a href="/login.html"> Déconnexion</a></li>
-        
+          <li class="nav-item dropdown">
+            <a class=" nav-icon"  (click)="showNotifications = !showNotifications">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications" [ngClass]="{'show': showNotifications}">
+              <li class="dropdown-header ">
+                Vous avez 4 nouvelles notifications
+                <a href="notification"><span class="badge rounded-pill bg-primary p-2 ms-2">Voir tout</span></a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4">
+                <div>
+                  <h5 style="color: #2474A6 ;font-size: 19px;">Wevioo</h5>
+                  <p>Un test envoyé par Wevioo vous attent</p>
+                  <p class="small-text">30 min. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr role="tabpanel"class="dropdown-divider">
+              </li>
+          
+              <li class="notification-item p-4 ">
+                <div>
+                  <h5 style="color: #2474A6  ;font-size: 19px;">CareerBridge</h5>
+                  <p>Vous atteint 75 Xp vous pouvez profiter une réduction sur la pack premium</p>
+                  <p class="small-text">1 hr. ago</p>
+                </div>
+              </li>
+          
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          
+              <li class="dropdown-footer p-4">
+                <a href="notification">Afficher toutes les notifications</a>
+              </li>
+            </ul>
+          </li>          <li class="nav-item dropdown" style="color: aliceblue;">
+            <div class="nav-link" id="dropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi bi-grid-3x3-gap-fill large-icon"></i>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropDown">
+              <a class="dropdown-item" href="#">Pack premium</a>
+              <a class="dropdown-item "style="color: #2474A6;" href="#" >1Xp</a>
+             
+            </div>
+          </li>
+          <div class=" d-lg-none nav-item dropdown">
+            <div class="nav-link " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src=" assets/images/person_2.jpg" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu " aria-labelledby="profileDropdown">
+              <a class="dropdown-item " href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item " href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
+          </div>   
           
         </ul>
       </nav>
       
       <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
         <div class="ml-auto">
-          <a href="/login" class="btn btn-log border-width-2 d-none d-lg-inline-block"> Déconnexion</a>
         
+            <div class=" .d-md-none .d-lg-block
+            " id="profileDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src=" assets/images/person_2.jpg" class="img-fluid rounded-circle " style="width: 40px;"> <!-- icône de profil -->
+            </div>
+            <div class="dropdown-menu" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="c">Profile</a> <!-- lien vers les paramètres -->
+              <a class="dropdown-item " href="parametre">Paramétres</a> <!-- lien vers les paramètres -->
+
+              <a class="dropdown-item" href="login">Déconnexion</a> <!-- lien de déconnexion -->
+            </div>
         </div>
         <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
       </div>
 
     </div>
   </div>
+
 
 </header>
 
@@ -68,8 +138,12 @@
                         <div class="col-xl-15">
                          
                                 <div class="mb-5 text-center">
-                                    <h1 class="text-white font-weight-bold">Développez votre réseau professionnel</h1>
-                                    <p class="text-light ">Élargissez votre champ d'action en rencontrant des professionnels de votre domaine et en explorant de nouvelles possibilités.</p>
+                                    <h1 class="text-white font-weight-bold">Espace de travail
+
+                                    </h1>
+                                    <p class="text-light ">Les candidats ont la possibilité de réserver des espaces
+                                        coworking 
+                                        .</p>
                               
                             </div>
                         </div>
@@ -174,11 +248,33 @@
                       <option value="communautaires">communautaires</option>
                       <option value="partagés">partagés</option>
                   
-                                   
-                                   </select>                    
+                                  
+                                   </select>                   
                                  <!--  Select job items End-->
                             
-
+  <!-- Range Slider Start -->
+  <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow select-Categorie pt-60">
+    <div class="small-section-tittle2">
+        <h5>Prix</h5>
+    </div>
+    <div class="widgets_inner">
+        <div class="range_item">
+            <!-- <div id="slider-range"></div> -->
+            <input type="text" class="js-range-slider" value="" />
+            <div class="d-flex align-items-center">
+                <div class="price_text">
+                    <p>Prix :</p>
+                </div>
+                <div class="price_value d-flex justify-content-center">
+                    <input type="text" class="js-input-from" id="amount" readonly />
+                    <span>à</span>
+                    <input type="text" class="js-input-to" id="amount" readonly />
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<!-- Range Slider End -->
 
 
                                
@@ -186,19 +282,12 @@
 
 
  
-                             
-
-              <div class="col-md-4  ">  </div>
-              <div class="col-md-4  ">  </div>
-              <div class="col-md-4  ">  </div>
-                                   
+           
 
               <br>
-              <div class="items-link items-link2   color:#2474A6">
-                <a style="background-color: #2474A6; "href="job_details.html">recherche</a>
-              
-              
-                            </div>
+              <div class="d-flex justify-content-center">
+                <a button type="button" class="btn btn-custom text-white" href="c" style="color:#2474A6;">recherche</a>
+           </div>
                            
  </div>
 
@@ -230,20 +319,21 @@
                                     
                                     <div class="col-lg-12">
                                        <!-- search bar right align -->
+       
+                        <!-- Job Category Listing start -->
+                        <div class="job-category-listing mb-5 ">
+                            <!-- single one -->
+                            <div class="single-listing">
+                              
+
         <div class="search">
-            <form action="#">
-                <input type="text" style="border:5px;"
-                    placeholder=" Commencez à chercher...
-                    "
-                    name="search">
-                <button>
-                    <i class="fas fa-search"
-                        style="font-size: 18px;">
-                    </i>
-                </button>
-            </form>
+            
+            <form>
+                <input type="text" placeholder="Rechercher...">
+                <button class="btn btn-custom" style="color:#2474A6,text-whiet" type="submit">Rechercher</button>
+              </form>
+              </div></div>
         </div>
-    
 <style>
 
         /* styling search bar */
@@ -275,92 +365,197 @@
 
 
 
-                                    </div>
-                                </div>
-                                <!-- Count of Job list End -->
-                                <!-- single-job-content -->
-                                <div class="single-job-items  pt-2">
-                                    <div class="job-items">
-                                        <div class="company-img mt-3">
-                                           
-
-                                            <a href="#"><img src="assets/images/cow2.png" alt=""></a>
-                                      
-                                        <div class="job-tittle job-tittle mt-4 ">
-                                            <ul>
-                                            <a href="#">
-                                                <li><h5>NextSpace</h5></li>
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-circle-fill"  class="text-secondary" viewBox="0 0 16 16">
-                                                <circle cx="3" cy="10" r="2"/>
-                                              </svg>
-                                            <li>Annonceur</li>
-                                        </ul>
-                                            <ul>
-                                                <li><p>Situé dans le nouveau pôle d'affaires de Tunis, notre centre Tunis Carthage bénéficie d'un emplacement idéal entre le centre-ville et l'aéroport de Tunis, à seulement 20 minutes des sites mythiques de Carthage et Sidi Bou Said. Le bâtiment offre également une vue époustouflante sur le lac de Tunis et permet d'accéder facilement à plusieurs restaurants gastronomiques.
-                                                </p></li><br>
-                                               
-                                                <a href="#"><img src="assets/images/cow4.png" alt="" style="width: 570px;  "></a>
-                                              
-                                            </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5  ">  </div>
-                                    <div class="col-md-5 mt-3 ">           
-                                    <a input type="bouton" style="font-size:15px;font-weight:500;color:#2474A6;"href="c" type="button">Voir Plus</a>
+                               <!-- Job Category Listing start -->
+<div class="job-category-listing mb-5 ">
+    <!-- single one -->
+    <div class="single-listing">
+       
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features">
+      
+          <div class="container">
+            
+            <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+    
+              <div class="col-md-12">
+                <a href="#"><img src="assets/images/cow2.png" class="img-fluid rounded-circle " style="width:60px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary">CoWork
+                </label><div class="d-flex flex-row align-items-center mb-2">
+                  <p class="mb-0 me-2 text-secondary">Lac 1</p>
+                  <ul class="mb-0 list-unstyled d-flex flex-row" style="color: #e8b200;">
+                    <li>
+                      <i class="bi bi-star-fill"></i>
+  
+                    </li>
+                    <li>
+                      <i class="bi bi-star-fill"></i>
+  
+                    </li>
+                    <li>
+                      <i class="bi bi-star-fill"></i>
+  
+                    </li>
+                   
+                  </ul>
+                </div>
+                <p  style="font-size: small;">Situé dans le nouveau pôle d'affaires de Tunis, notre centre Tunis Carthage bénéficie d'un emplacement idéal entre le centre-ville et l'aéroport de Tunis, à seulement 20 minutes des sites mythiques de Carthage et Sidi Bou Said. Le bâtiment offre également une vue époustouflante sur le lac de Tunis et permet d'accéder facilement à plusieurs restaurants gastronomiques.
+  
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <img src="assets/images/cow4.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <img src="assets/images/cow5.png" class="d-block w-100" alt="...">
+                    </div>
+                    
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a input type="bouton" style="font-size:15px;font-weight:500;color:#2474A6;"href="detailcow" type="button">Voir Plus</a>
+                  </div>
+              </div>
+             
+            </div><!-- Features Item -->
+    </div></section>
+       
+           
+  
+        
+          
+            </div></div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+                                      </div>
                                   </div>
-                                    <div class="voir ml-5 ">
-                                        <div class="voir ml-5 "></div> 
-                                       
-                                    </div>
-                                </div>
-                                 <!-- single-job-content -->
-                                  <!-- single-job-content -->
-                                <div class="single-job-items mt-30 mr-2">
-                                    <div class="job-items">
-                                        <div class="company-img mt-3">
+                               
+                                 
+                               <!-- Job Category Listing start -->
+<div class="job-category-listing mb-5 ">
+    <!-- single one -->
+    <div class="single-listing">
+       
+        <!-- ======= Features Section ======= -->
+        <section id="features" class="features">
+      
+          <div class="container">
+            
+            <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+    
+              <div class="col-md-12">
+                <a href="#"><img src="assets/images/cow1.png" class="img-fluid rounded-circle " style="width:60px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary">The Box
+                </label><div class="d-flex flex-row align-items-center mb-2">
+                  <p class="mb-0 me-2 text-secondary">Lac 2 </p>
+                  <ul class="mb-0 list-unstyled d-flex flex-row" style="color: #e8b200;">
+                    <li>
+                      <i class="bi bi-star-fill"></i>
+  
+                    </li>
+                    <li>
+                      <i class="bi bi-star-fill"></i>
+  
+                    </li>
+                   
+                   
+                  </ul>
+                </div>
+                <p  style="font-size: small;">Un espace de coworking baigné de lumière au cœur de la Tunisie, Centre Urbain Nord est l'endroit idéal pour être vraiment productif et rencontrer des professionnels qui vous ressemblent.
+  
+                <div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                      <img src="assets/images/cow3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                      <img src="assets/images/cow5.png" class="d-block w-100" alt="...">
+                    </div>
+                    
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a input type="bouton" style="font-size:15px;font-weight:500;color:#2474A6;"href="detailcow" type="button">Voir Plus</a>
+                  </div>
+              </div>
+             
+            </div><!-- Features Item -->
+    </div></section>
+       
+       
+           
+  
+        
+           
+            </div></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+                                  
+                               
+                     
+  
+  
+  
+  
+                                  
+                                  
                                            
-
-                                            <a href="#"><img src="assets/images/cow1.png" alt=""></a>
-                                      
-                                        <div class="job-tittle job-tittle mt-4">
-                                            <ul>
-                                            <a href="#">
-                                                <li><h5>CoLAB </h5></li>
-                                            </a>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-circle-fill"  class="text-secondary" viewBox="0 0 16 16">
-                                                <circle cx="3" cy="10" r="2"/>
-                                              </svg>
-                                            <li>Annonceur</li>
-                                        </ul>
-                                            <ul>
-                                                <li><p>Un espace de coworking baigné de lumière au cœur de la Tunisie, Centre Urbain Nord est l'endroit idéal pour être vraiment productif et rencontrer des professionnels qui vous ressemblent .</p></li><br>
-                                               
-                                                <a href="#"><img src="assets/images/cow5.png" alt="" style="width: 570px;  "></a>
-                                              
-                                            </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5  ">  </div>
-                                    <div class="col-md-5 mt-3 ">           
-                                    <a input type="bouton" style="font-size:15px;font-weight:500;color:#2474A6;"href="c" type="button">Voir Plus</a>
-                                  </div>
-                                    <div class="voir ml-5 ">
-                                        <div class="voir ml-5 "></div>
-                                       
-                                    </div>
-                                </div>
-
-
-                                
-                               </div>
-                            
-                        </section>
-                        <!-- Featured_job_end -->
+                                  
+                                  
+ 
+  
+  
+  
+  
+  
+                                  
+                               
+                              
+                          </section>
+                          <!-- Featured_job_end -->
                         
                     </div>
+
+
+
+
+
+
+
+
+
+
                     <!-- Left content -->
                     <div class="col-xl-3 col-lg-3 col-md-4 ">
                         
@@ -442,18 +637,15 @@
                                         <label class="text-secondary"> Annonceur</label><br>
                                        
                                     </label><br><br>
-                                    <div class="items-link items-link2 mb-4  color:#2474A6">
-                                        <a style="background-color: #2474A6;font-style:#ffff; "href="job_details.html">Suivre</a>
-                                      
-                                      
-                                    </div><br>
+                                    <div class="d-flex justify-content-center">
+                                        <a button type="button" class="btn btn-custom text-white" href="c" style="color:#2474A6;">Suivre</a>
+                                   </div><br>
                                     <a href="#"><img src="assets/images/cow1.png" class="img-fluid  " style="width:60px " alt=""></a><label class=" ml-3"style="font-size:18px,text-secondary"> Collaborate & Create<br>
                                         <label class="text-secondary">Annonceur</label><br>
                                     </label><br><br>
-                                    <div class="items-link items-link2 mb-4  color:#2474A6">
-                                        <a style="background-color: #2474A6;font-style:#ffff; "href="job_details.html">Suivre</a>
-                                      
-                                    </div><br>
+                                    <div class="d-flex justify-content-center">
+                                        <a button type="button" class="btn btn-custom text-white" href="c" style="color:#2474A6;">Suivre</a>
+                                   </div><br>
 
 
     

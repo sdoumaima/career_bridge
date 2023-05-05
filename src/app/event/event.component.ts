@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent {
-
+  showNotifications: boolean = false;
+  
+  toggleNotifications() {
+    this.showNotifications = !this.showNotifications;
+   }
+   // ...
 }

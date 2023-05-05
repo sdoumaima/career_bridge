@@ -13,6 +13,21 @@ import { OffreComponent } from './offre/offre.component';
 import { EventComponent } from './event/event.component';
 import { CowComponent } from './cow/cow.component';
 import { ActualiteComponent } from './actualite/actualite.component';
+import { DetailcowComponent } from './detailcow/detailcow.component';
+import { DetailoffreComponent } from './detailoffre/detailoffre.component';
+import { ReservationComponent } from './reservation/reservation.component';
+
+
+import { RComponent } from './r/r.component';
+import { ActualiteRComponent } from './actualite-r/actualite-r.component';
+import { OffreRComponent } from './offre-r/offre-r.component';
+import { EventRComponent } from './event-r/event-r.component';
+import { CoworkingRComponent } from './coworking-r/coworking-r.component';
+import { NotificationRComponent } from './notification-r/notification-r.component';
+import { DetailcoworkingRComponent } from './detailcoworking-r/detailcoworking-r.component';
+import { NotificationComponent } from './notification/notification.component';
+import { CandidaturesCComponent } from './candidatures-c/candidatures-c.component';
+
 
 const routes: Routes = [
   {path :"home",component:HomeComponent},
@@ -28,6 +43,20 @@ const routes: Routes = [
   {path :"event",component:EventComponent},
   {path :"cow",component:CowComponent},
   {path :"actualite",component:ActualiteComponent},
+  {path :"detailcow",component:DetailcowComponent},
+  {path :"detailoffre",component:DetailoffreComponent},
+  {path :"reservation",component:ReservationComponent},
+ 
+  {path :"r",component:RComponent},
+  {path :"actualiteR",component:ActualiteRComponent},
+  {path :"offreR",component:OffreRComponent},
+  {path :"eventR",component:EventRComponent},
+  {path :"coworkingR",component:CoworkingRComponent},
+  {path :"notificationR",component:NotificationRComponent},
+  {path :"detailcoworkingR",component:DetailcoworkingRComponent},
+  {path :"notification",component:NotificationComponent},
+
+  {path :"candidaturesC",component:CandidaturesCComponent},
 
   {path: '', redirectTo: '/home', pathMatch: 'full'},
 ];

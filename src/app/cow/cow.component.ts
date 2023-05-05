@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./cow.component.css']
 })
 export class CowComponent {
-
+  showNotifications: boolean = false;
+  
+  toggleNotifications() {
+    this.showNotifications = !this.showNotifications;
+   }
+   // ...
 }

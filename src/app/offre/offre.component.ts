@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./offre.component.css']
 })
 export class OffreComponent {
-
+  showNotifications: boolean = false;
+  
+  toggleNotifications() {
+    this.showNotifications = !this.showNotifications;
+   }
+   // ...
 }

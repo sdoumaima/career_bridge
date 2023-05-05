@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./actualite.component.css']
 })
 export class ActualiteComponent {
-
+  showNotifications: boolean = false;
+  
+  toggleNotifications() {
+    this.showNotifications = !this.showNotifications;
+   }
+   // ...
 }

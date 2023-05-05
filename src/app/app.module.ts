@@ -8,8 +8,6 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 
-import { FormsModule } from '@angular/forms';
-
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { LoginComponent } from './login/login.component';
@@ -24,8 +22,22 @@ import { OffreComponent } from './offre/offre.component';
 import { EventComponent } from './event/event.component';
 import { CowComponent } from './cow/cow.component';
 import { ActualiteComponent } from './actualite/actualite.component';
+import { DetailcowComponent } from './detailcow/detailcow.component';
+import { DetailoffreComponent } from './detailoffre/detailoffre.component';
+import { ReservationComponent } from './reservation/reservation.component';
 import { RComponent } from './r/r.component';
-import { ClComponent } from './cl/cl.component';
+import { ActualiteRComponent } from './actualite-r/actualite-r.component';
+import { OffreRComponent } from './offre-r/offre-r.component';
+import { EventRComponent } from './event-r/event-r.component';
+import { CoworkingRComponent } from './coworking-r/coworking-r.component';
+import { NotificationComponent } from './notification/notification.component';
+import { NotificationRComponent } from './notification-r/notification-r.component';
+import { DetailcoworkingRComponent } from './detailcoworking-r/detailcoworking-r.component';
+import { FormsModule } from '@angular/forms';
+import { CandidaturesCComponent } from './candidatures-c/candidatures-c.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -49,16 +61,29 @@ import { ClComponent } from './cl/cl.component';
     EventComponent,
     CowComponent,
     ActualiteComponent,
-    RComponent,
-    ClComponent
-    
+  
+    DetailcowComponent,
+       DetailoffreComponent,
+       ReservationComponent,
+       RComponent,
+       ActualiteRComponent,
+       OffreRComponent,
+       EventRComponent,
+       CoworkingRComponent,
+       NotificationComponent,
+       NotificationRComponent,
+       DetailcoworkingRComponent,
+       CandidaturesCComponent,
+       
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    FormsModule
-    
+    FormsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
